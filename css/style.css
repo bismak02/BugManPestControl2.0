@@ -1,17 +1,16 @@
-
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
     transition: opacity .8s ease-out, visibility 0s linear .5s;
     z-index: 99999;
- }
+}
 
- #spinner.show {
-     transition: opacity .8s ease-out, visibility 0s linear .0s;
-     visibility: visible;
-     opacity: 1;
- }
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+}
 
 /*** Spinner End ***/
 
@@ -51,10 +50,7 @@
     color: var(--bs-dark) !important;
 }
 
-
-
 /*** Topbar Start ***/
-
 .search-btn {
     position: relative;
     width: 100%;
@@ -101,7 +97,6 @@
 }
 
 /*** Topbar End ***/
-
 /*** Navbar Start ***/
 .navbar .navbar-nav {
     padding: 15px 0;
