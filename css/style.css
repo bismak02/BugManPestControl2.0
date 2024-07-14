@@ -39,9 +39,7 @@
     border-color: #5a4c32 !important;
 }
 
-.nav-item .nav-link.active {
-    color: #6c5f3d !important;
-}
+
        
 
 
@@ -58,8 +56,8 @@
     visibility: visible;
     opacity: 1;
 }
-
 /*** Spinner End ***/
+
 
 .back-to-top {
     position: fixed;
@@ -74,7 +72,7 @@
 }
 
 .btn {
-    text-transform: uppercase;
+ 
     font-weight: 500;
     transition: .5s;
 }
@@ -96,9 +94,12 @@
     box-shadow: inset 200px 0 0 0 var(--bs-primary);
     color: #6c5f3d;
 }
-
+.btn-contact-us {
+    font-size: 2.5rem; /* Adjust the font size to make the button larger */
+    margin-top: 4rem; /* Increase the top margin to move the button down */
+    color: white !important;
+}
 /*** Topbar Start ***/
-
 
 @media (max-width: 768px) {
     .topbar {
@@ -123,26 +124,29 @@
 }
 
 /*** Topbar End ***/
+
+
 /*** Navbar Start ***/
 .navbar .navbar-nav {
     padding: 15px 0;
 }
 
-
-.navbar .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     padding: 15px;
-    color: var(--bs-white);
     font-weight: 500;
     font-size: 16px;
-    outline: none;
     transition: .5s;
+    color: white; /* Set default text color to white */
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active  {
-    color: #6c5f3d;
-    transition: .5s;
+.navbar .navbar-nav .nav-link:hover {
+    color: #6c5f3d; /* Brown color for hover state */
 }
+
+.navbar .navbar-nav .nav-link.active {
+    background-color: #6c5f3d; /* Brown background for active state */
+}
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -179,7 +183,7 @@
 
 .navbar-toggler {
     background: var(--bs-secondary);
-    color:#6c5f3d;
+    color: #6c5f3d;
     padding: 5px 12px;
     border: 2px solid var(--bs-primary) !important;
 }
@@ -189,7 +193,6 @@
 
 
 /*** Carousel Start ***/
-
 .carousel-item {
     position: relative;
 }
@@ -304,7 +307,7 @@
     content: "";
     width: 100%;
     height: 60%;
-    background: var(--bs-primary);
+    background: #6c5f3d;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -359,7 +362,6 @@
 
 /*** About End ***/
 
-
 /*** Services Start ***/
 .services-inner-icon {
     width: 130px;
@@ -370,7 +372,6 @@
     justify-content: center;
     transition: .5s;
     position: relative;
-    
 }
 
 .services-inner-icon::after {
@@ -378,7 +379,7 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-radius: 62px;
+    border-radius: 50%;
     top: 50%;
     left: 50%;
     transition: .5s;
@@ -389,20 +390,18 @@
     height: 100%;
     margin-top: -50%;
     margin-left: -50%;
-    background: var(--bs-primary);
-    color: #6c5f3d;
-    
-} 
+    background: #6c5f3d; /* Brown color for the circle */
+}
 
 .services-item i {
     text-align: center;
-    transition: .5s;
+    transition: color 0.5s, transform 0.5s;
+    z-index: 1; /* Ensure the icon is on top of the after pseudo-element */
 }
 
-.services-item:hover i {
-    color: #6c5f3d;
-    z-index: 1;
-    rotate: 360deg;
+.services-item:hover .services-inner-icon i {
+    color: #fff !important; /* White color for the icon */
+    transform: rotate(360deg); /* Add back the rotation effect */
 }
 
 .services-btn {
@@ -410,8 +409,7 @@
     align-items: center;
     justify-content: center;
 }
-
-/*** Services Start ***/
+/*** Services End ***/
 
 /*** Project Start ***/
 .project-item {
@@ -439,7 +437,7 @@
     content: "";
     width: 100%;
     height: 60%;
-    background: var(--bs-primary);
+    background: #6c5f3d;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -497,8 +495,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    background: var(--bs-primary);
-    color: #6c5f3d;
+    background: #6c5f3d;
+    color: #ffff;
     opacity: 1;
 
 }
@@ -703,7 +701,6 @@
 .footer-item a {
     color: rgba(255, 255, 255, .7); /* Set color for footer links */
     text-decoration: none;
-    text-transform: lowercase;
 }
 
 .footer-item a:hover {
@@ -717,6 +714,18 @@
 .footer-item.text-center.text-md-start .d-flex {
     justify-content: center;
 }
+
+.location-text {
+    display: block; /* Ensures it's a block element */
+    padding-left: 0; /* Removes the padding */
+    padding-bottom: 1rem; /* Matches the original padding */
+    border-bottom: 1px solid #ccc; /* Matches the original border */
+    border-radius: 0; /* Matches the original border radius */
+    color: inherit; /* Keeps the original text color */
+    font-weight: normal; /* Ensures it doesn't have the bold weight */
+    transition: none; /* Removes any transition effect */
+}
+
 
 /*** Footer End ***/
 
@@ -737,8 +746,16 @@
     align-items: center; 
     justify-content: center;
 }
-.text-brown {
-    color: #6c5f3d;
-/*** Copyright End ***/
+
+.designed-by a {
+    color: inherit; /* Keep the original color */
+    transition: color 0.5s; /* Smooth transition effect */
+}
+
+.designed-by a:hover {
+    color: #6c5f3d !important; /* Brown color when hovered, with important */
+}
+    
+    /*** Copyright End ***/
 
 

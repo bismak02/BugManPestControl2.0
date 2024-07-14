@@ -32,8 +32,6 @@
      
         
 </head>
-
-
     <body>
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
@@ -60,37 +58,26 @@
         </div>
         <!-- Topbar End -->
 
-        <!-- Navbar Start -->
         <div class="container-fluid bg-dark">
             <div class="container">
                 <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
                     <a href="index.html" class="navbar-brand">
                         <h1 class="text-primary mb-0 display-5">BugMan<span class="text-white">Pest Control</span> <img src="img/logo.png" alt="Bug Mann Pest Control" class="img-fluid" style="max-height: 100px;"></h1>
                     </a>
-                    </a>
                     <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-dark"></span>
                     </button>
                     <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0 bg-primary">
-                                    <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="price.html" class="nav-item nav-link">Pricing</a>
+                           <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
-        <!-- Navbar End -->
-
 
         <!-- Carousel Start -->
         <div class="container-fluid carousel px-0 mb-5 pb-5">
@@ -101,7 +88,10 @@
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h4 class="text-white mb-4 animated slideInDown">Number 1 Pest Control Services</h4>
-                                <h1 class="text-white display-1 mb-4 animated slideInDown">Enjoy Your Home Totally Pest Free</h1>
+                                <h1 class="text-white display-1 mb-4 animated slideInDown">Defending Your Space from Unwanted Guests</h1>
+                                <div class="text-end mt-4">
+                                    <a href="contact.html" class="btn btn-primary btn-lg btn-contact-us">Contact Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -421,7 +411,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-item">
                         <h4 class="text-white fw-bold mb-4">Contact Us</h4>
-                        <a href="" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>Salisbury, MD</a>
+                        <p class="location-text"><i class="fa fa-map-marker-alt me-3"></i>Salisbury, MD</p>
                         <a href="tel:+14106351055" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>410-635-1055</a>
                         <a href="mailto:bugmannpestcontrol@gmail.com" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>bugmannpestcontrol@gmail.com</a> </div>
                     </div>
@@ -429,7 +419,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
 <!-- Copyright Start -->
 <div class="container-fluid copyright bg-dark py-4">
@@ -441,14 +430,15 @@
                 </a>
             </div>
             <div class="col-md-4 text-center text-md-center mb-3 mb-md-0">
-                <p class="mb-0 text-brown">BugMan Pest Control © 2024 All Right Reserved.</p>
+                <p class="mb-0 text-white">BugMan Pest Control © 2024 All Right Reserved.</p>
             </div>
             <div class="col-md-4 text-center text-md-end text-brown">
-                <p class="mb-0"><a href="https://bismakhan.com" class="text-brown" target="_blank">Designed By Bisma Khan</a></p>
+                <p class="designed-by"><a href="https://bismakhan.com" class="text-white" target="_blank">Designed By Bisma Khan</a></p>
             </div>
         </div>
     </div>
 </div>
+<!-- Copyright End -->
 <!-- Copyright End -->
 
         <!-- Back to Top -->
@@ -466,6 +456,20 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const currentLocation = location.href;
+                const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        
+                navLinks.forEach(link => {
+                    if (link.href === currentLocation) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        </script>
+
     </body>
 
 </html>
