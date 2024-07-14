@@ -188,7 +188,20 @@
     padding: 5px 12px;
     border: 2px solid var(--bs-primary) !important;
 }
+.navbar-brand h1 {
+    display: flex;
+    align-items: center;
+}
 
+.logo-img {
+    max-height: 80px; /* Adjust maximum height as per your design */
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-height: 60px; /* Adjust for smaller screens if needed */
+    }
+}
 /*** Navbar End ***/
 
 /*** Carousel Start ***/
@@ -265,7 +278,7 @@
 @media (max-width: 768px) {
     .carousel-item {
         width: 100%;
-        height: 400px;
+        height: 100%;
     }
 
     .carousel-item img {
@@ -290,7 +303,7 @@
 
     .btn-contact-us {
         width: 80%; /* Adjust width as needed */
-        max-width: 280px; /* Adjust max-width as needed */
+        max-width: 500px; /* Adjust max-width as needed */
         margin: auto; /* Center button horizontally */
     }
 }
