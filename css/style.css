@@ -208,14 +208,15 @@
 }
 
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
     text-align: center;
     z-index: 1;
-    padding: 0 20px; /* Adjust horizontal padding */
-    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 30px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in height calculation */
 }
 
 .carousel-caption h4,
@@ -288,8 +289,8 @@
     }
 
     .btn-contact-us {
-        width: auto; /* Allow button to adjust width based on content */
-        max-width: calc(100% - 40px); /* Ensure button does not exceed parent width */
+        width: 80%; /* Adjust width as needed */
+        max-width: 280px; /* Adjust max-width as needed */
         margin: auto; /* Center button horizontally */
     }
 }
