@@ -58,7 +58,8 @@
         </div>
         <!-- Topbar End -->
 
-        <div class="container-fluid bg-dark">
+        <!--  Navbar Start -->
+        <div class="container-fluid bg-dark" id="navbar">
             <div class="container">
                 <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
                     <a href="index.html" class="navbar-brand">
@@ -72,12 +73,13 @@
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="price.html" class="nav-item nav-link">Pricing</a>
-                           <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
+      <!--  Navbar End -->
 
         <!-- Carousel Start -->
         <div class="container-fluid carousel px-0 mb-5 pb-5">
@@ -204,7 +206,7 @@
 
 
         <!-- Project Start -->
-        <div class="container-fluid py-5">
+    <!--     <div class="container-fluid py-5">
             <div class="container py-5">
                 <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
                     <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-dark">Our Project</h5>
@@ -261,7 +263,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Project End -->
 
 
@@ -468,6 +470,17 @@
                     }
                 });
             });
+
+            
+            window.onscroll = function() {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.style.top = "0";
+    } else {
+        navbar.style.top = "0";
+    }
+};
+
         </script>
 
     </body>

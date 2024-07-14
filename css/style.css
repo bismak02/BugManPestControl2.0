@@ -127,6 +127,15 @@
 
 
 /*** Navbar Start ***/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    background-color: #6c5f3d; /* Ensure navbar background color matches your theme */
+    transition: top 0.3s; /* Smooth transition for hiding/showing the navbar */
+}
+
 .navbar .navbar-nav {
     padding: 15px 0;
 }
@@ -187,7 +196,6 @@
     padding: 5px 12px;
     border: 2px solid var(--bs-primary) !important;
 }
-
 /*** Navbar End ***/
 
 
@@ -518,7 +526,7 @@
 }
 
 .pricing-label {
-    border-bottom: 20px solid var(--bs-light);
+    border-bottom: 20px solid #6c5f3d;
     border-radius: 0 0 300px 300px;
     transition: .5s;
 }
